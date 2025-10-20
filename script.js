@@ -34,6 +34,7 @@ function initializeMDCComponents() {
     const drawerElement = document.querySelector('.mdc-drawer');
     if (drawerElement) {
         const drawer = new mdc.drawer.MDCDrawer(drawerElement);
+        window.appDrawer = drawer;
         
         // Menu button functionality
         const menuButton = document.getElementById('menu-button');
@@ -43,7 +44,59 @@ function initializeMDCComponents() {
             });
         }
         
-        // Close drawer when clicking on nav items
+        // Enhance open/close UX
+        drawer.listen('MDCDrawer:opened', () => {
+            drawerElement.classList.add('open');
+            document.body.classList.add('disable-scroll');
+            if (menuButton) {
+                menuButton.textContent = 'close';
+                menuButton.setAttribute('aria-label', 'Close navigation menu');
+            }
+        });
+        
+        drawer.listen('MDCDrawer:closed', () => {
+            drawerElement.classList.remove('open');
+            document.body.classList.remove('disable-scroll');
+            if (menuButton) {
+                menuButton.textContent = 'menu';
+                menuButton.setAttribute('aria-label', 'Open navigation menu');
+            }
+        });
+        
+        // Close drawer when clicking on nav items (app grid)
+        const gridItems = drawerElement.querySelectorAll('.app-drawer-item');
+        gridItems.forEach(item => {
+            item.addEventListener('click', () => {
+                drawer.open = false;
+            });
+            // subtle ripple
+            addRippleEffect(item);
+        });
+        
+        // Drawer actions
+        const drawerQuote = document.getElementById('drawer-quote');
+        if (drawerQuote) {
+            drawerQuote.addEventListener('click', () => {
+                drawer.open = false;
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+        
+        const drawerContact = document.getElementById('drawer-contact');
+        if (drawerContact) {
+            drawerContact.addEventListener('click', () => {
+                drawer.open = false;
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+        
+        // Close drawer when clicking on previous list items (fallback)
         const drawerItems = drawerElement.querySelectorAll('.mdc-list-item');
         drawerItems.forEach(item => {
             item.addEventListener('click', () => {
@@ -219,6 +272,7 @@ function initializeFloatingActionButton() {
 function initializeNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link, .mdc-list-item');
+    const header = document.querySelector('.mdc-top-app-bar');
     
     window.addEventListener('scroll', () => {
         let current = '';
@@ -240,6 +294,14 @@ function initializeNavigation() {
                 link.classList.add('mdc-list-item--activated');
             }
         });
+        
+        if (header) {
+            if (window.scrollY > 4) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }
     });
 }
 
@@ -376,13 +438,7 @@ function initializeCTAButtons() {
     
     if (heroSecondary) {
         heroSecondary.addEventListener('click', () => {
-            const portfolioSection = document.getElementById('portfolio');
-            if (portfolioSection) {
-                portfolioSection.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            window.location.href = 'templates.html';
         });
     }
     

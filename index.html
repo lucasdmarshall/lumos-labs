@@ -41,44 +41,46 @@
     </header>
 
     <!-- Mobile Navigation Drawer -->
-    <aside class="mdc-drawer mdc-drawer--modal">
+    <aside class="mdc-drawer mdc-drawer--modal app-drawer">
         <div class="mdc-drawer__header">
             <h3 class="mdc-drawer__title">MVP Websites</h3>
             <h6 class="mdc-drawer__subtitle">Professional Web Solutions</h6>
         </div>
         <div class="mdc-drawer__content">
-            <nav class="mdc-list">
-                <a class="mdc-list-item mdc-list-item--activated" href="#home">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
-                    <span class="mdc-list-item__text">Home</span>
+            <div class="app-drawer-grid">
+                <a class="app-drawer-item" href="#home">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">home</i></div>
+                    <span class="app-label">Home</span>
                 </a>
-                <a class="mdc-list-item" href="templates.html">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">web</i>
-                    <span class="mdc-list-item__text">Templates</span>
+                <a class="app-drawer-item" href="templates.html">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">web</i></div>
+                    <span class="app-label">Templates</span>
                 </a>
-                <a class="mdc-list-item" href="#services">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">build</i>
-                    <span class="mdc-list-item__text">Services</span>
+                <a class="app-drawer-item" href="#services">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">build</i></div>
+                    <span class="app-label">Services</span>
                 </a>
-                <a class="mdc-list-item" href="#portfolio">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">work</i>
-                    <span class="mdc-list-item__text">Portfolio</span>
+                <a class="app-drawer-item" href="#portfolio">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">work</i></div>
+                    <span class="app-label">Portfolio</span>
                 </a>
-                <a class="mdc-list-item" href="#pricing">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">attach_money</i>
-                    <span class="mdc-list-item__text">Pricing</span>
+                <a class="app-drawer-item" href="#pricing">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">attach_money</i></div>
+                    <span class="app-label">Pricing</span>
                 </a>
-                <a class="mdc-list-item" href="#contact">
-                    <span class="mdc-list-item__ripple"></span>
-                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">contact_mail</i>
-                    <span class="mdc-list-item__text">Contact</span>
+                <a class="app-drawer-item" href="#contact">
+                    <div class="app-icon"><i class="material-icons" aria-hidden="true">contact_mail</i></div>
+                    <span class="app-label">Contact</span>
                 </a>
-            </nav>
+            </div>
+            <div class="app-drawer-actions">
+                <button class="mdc-button mdc-button--raised app-action-cta" id="drawer-quote">
+                    <span class="mdc-button__label">Get Quote</span>
+                </button>
+                <button class="mdc-button mdc-button--outlined app-action-secondary" id="drawer-contact">
+                    <span class="mdc-button__label">Message Us</span>
+                </button>
+            </div>
         </div>
     </aside>
     <div class="mdc-drawer-scrim"></div>
@@ -97,7 +99,7 @@
                             <span class="mdc-button__label">Get Started</span>
                         </button>
                         <button class="mdc-button mdc-button--outlined hero-secondary">
-                            <span class="mdc-button__label">View Portfolio</span>
+                            <span class="mdc-button__label">Browse Templates</span>
                         </button>
                     </div>
                 </div>
