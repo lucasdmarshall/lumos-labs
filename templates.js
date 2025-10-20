@@ -454,12 +454,15 @@ function initializeMobileMenu() {
             });
         }
         
-        // Close drawer when clicking on nav items
-        const drawerItems = drawerElement.querySelectorAll('.mdc-list-item');
+        // Close drawer when clicking on nav items (supports app grid)
+        const drawerItems = drawerElement.querySelectorAll('.app-drawer-item, .mdc-list-item');
         drawerItems.forEach(item => {
             item.addEventListener('click', () => {
                 drawer.open = false;
             });
+            if (typeof addRippleEffect === 'function' && item.classList.contains('app-drawer-item')) {
+                addRippleEffect(item);
+            }
         });
     }
 }
