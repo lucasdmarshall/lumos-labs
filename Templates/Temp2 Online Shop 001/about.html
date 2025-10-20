@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="About Us - Mimo's Handicrafts" data-mm="ကျွန်ုပ်တို့အကြောင်း - မီမို့လက်မှုပစ္စည်းများ">About Us - Mimo's Handicrafts</title>
+    
+    <!-- Material Design CSS -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="os.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="app-header">
+        <div class="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="menuBtn">menu</button>
+                    <span class="mdc-top-app-bar__title" data-en="About Us" data-mm="ကျွန်ုပ်တို့အကြောင်း">About Us</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <!-- Language Switcher -->
+                    <button class="mdc-icon-button language-switcher" id="langSwitcher" title="Switch Language">
+                        <span class="material-icons">language</span>
+                        <span class="lang-text" data-en="MM" data-mm="EN">MM</span>
+                    </button>
+                    <!-- Cart Button -->
+                    <button class="mdc-icon-button" id="cartBtn" title="Shopping Cart">
+                        <span class="material-icons">shopping_cart</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer -->
+    <aside class="mdc-drawer mdc-drawer--modal" id="navDrawer">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title" data-en="Menu" data-mm="မီနူး">Menu</h3>
+        </div>
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item" href="os.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">store</i>
+                    <span class="mdc-list-item__text" data-en="Products" data-mm="ပစ္စည်းများ">Products</span>
+                </a>
+                <a class="mdc-list-item" href="cart.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">shopping_cart</i>
+                    <span class="mdc-list-item__text" data-en="Cart" data-mm="စျေးဝယ်စာရင်း">Cart</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="about.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">info</i>
+                    <span class="mdc-list-item__text" data-en="About Us" data-mm="ကျွန်ုပ်တို့အကြောင်း">About Us</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+
+    <!-- Main Content -->
+    <main class="main-content mdc-top-app-bar--fixed-adjust">
+        <!-- Hero Section -->
+        <section class="about-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-en="About Mimo's Handicrafts" data-mm="မီမို့လက်မှုပစ္စည်းများအကြောင်း">About Mimo's Handicrafts</h1>
+                    <p class="hero-subtitle" data-en="Preserving traditional craftsmanship with modern elegance" data-mm="ခေတ်မီဆန်းသစ်မှုဖြင့် ရိုးရာလက်မှုအမွေအနှစ်ကို ထိန်းသိမ်းခြင်း">Preserving traditional craftsmanship with modern elegance</p>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=600&h=400&fit=crop&crop=center" alt="Handicrafts Workshop" class="workshop-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section class="story-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="Our Story" data-mm="ကျွန်ုပ်တို့၏ဇာတ်လမ်း">Our Story</h2>
+                </div>
+                <div class="story-content">
+                    <div class="story-text">
+                        <p data-en="Founded with a passion for preserving Myanmar's rich cultural heritage, Mimo's Handicrafts began as a small family workshop in the heart of Yangon. Our journey started with a simple belief: that traditional craftsmanship deserves a place in the modern world." data-mm="မြန်မာနိုင်ငံရဲ့ ကြွယ်ဝတဲ့ ယဉ်ကျေးမှုအမွေအနှစ်ကို ထိန်းသိမ်းလိုစိတ်နဲ့ ရန်ကုန်မြို့လယ်မှာ မိသားစုအလုပ်ရုံလေးတစ်ခုအဖြစ် Mimo's Handicrafts ကို စတင်ခဲ့ပါတယ်။ ကျွန်ုပ်တို့ရဲ့ ခရီးက ရိုးရှင်းတဲ့ယုံကြည်ချက်တစ်ခုနဲ့ စတင်ခဲ့တာပါ၊ အဲ့ဒါကတော့ ရိုးရာလက်မှုပညာဟာ ခေတ်မီကမ္ဘာမှာ နေရာတစ်နေရာ ထိုက်တန်တယ်ဆိုတာပါပဲ။">Founded with a passion for preserving Myanmar's rich cultural heritage, Mimo's Handicrafts began as a small family workshop in the heart of Yangon. Our journey started with a simple belief: that traditional craftsmanship deserves a place in the modern world.</p>
+                        
+                        <p data-en="Today, we work with skilled artisans from across Myanmar, each bringing their unique expertise and cultural knowledge to create beautiful, authentic handicrafts. Every piece tells a story of tradition, skill, and dedication." data-mm="ဒီနေ့မှာတော့ ကျွန်ုပ်တို့ဟာ မြန်မာနိုင်ငံတစ်ဝှမ်းက ကျွမ်းကျင်တဲ့ လက်မှုပညာရှင်တွေနဲ့ လက်တွဲပြီး လှပပြီး စစ်မှန်တဲ့ လက်မှုပစ္စည်းတွေကို ဖန်တီးနေပါတယ်။ ပစ္စည်းတစ်ခုချင်းစီက ရိုးရာ၊ ကျွမ်းကျင်မှုနဲ့ စေတနာတို့ရဲ့ ဇာတ်လမ်းတစ်ပုဒ်ကို ပြောပြနေပါတယ်။">Today, we work with skilled artisans from across Myanmar, each bringing their unique expertise and cultural knowledge to create beautiful, authentic handicrafts. Every piece tells a story of tradition, skill, and dedication.</p>
+                    </div>
+                    <div class="story-image">
+                        <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=500&h=600&fit=crop&crop=center" alt="Artisan at work" class="artisan-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="Our Values" data-mm="ကျွန်ုပ်တို့၏တန်ဖိုးများ">Our Values</h2>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card mdc-card">
+                        <div class="value-icon">
+                            <span class="material-icons">handyman</span>
+                        </div>
+                        <h3 data-en="Authentic Craftsmanship" data-mm="စစ်မှန်သောလက်မှုပညာ">Authentic Craftsmanship</h3>
+                        <p data-en="We preserve traditional techniques passed down through generations, ensuring each piece maintains its cultural authenticity." data-mm="ကျွန်ုပ်တို့ဟာ မျိုးဆက်တွေဆီက လက်ဆင့်ကမ်းလာတဲ့ ရိုးရာနည်းပညာတွေကို ထိန်းသိမ်းပြီး ပစ္စည်းတစ်ခုချင်းစီရဲ့ ယဉ်ကျေးမှုစစ်မှန်မှုကို သေချာစေပါတယ်။">We preserve traditional techniques passed down through generations, ensuring each piece maintains its cultural authenticity.</p>
+                    </div>
+                    
+                    <div class="value-card mdc-card">
+                        <div class="value-icon">
+                            <span class="material-icons">eco</span>
+                        </div>
+                        <h3 data-en="Sustainable Practices" data-mm="ရေရှည်တည်တံ့သော အလေ့အကျင့်များ">Sustainable Practices</h3>
+                        <p data-en="We use eco-friendly materials and support sustainable production methods that respect our environment and communities." data-mm="ကျွန်ုပ်တို့ဟာ သဘာဝပတ်ဝန်းကျင်နဲ့ အသိုင်းအဝိုင်းကို လေးစားတဲ့ ရေရှည်တည်တံ့ခိုင်မြဲတဲ့ ထုတ်လုပ်မှုနည်းလမ်းတွေကို အသုံးပြုပါတယ်။">We use eco-friendly materials and support sustainable production methods that respect our environment and communities.</p>
+                    </div>
+                    
+                    <div class="value-card mdc-card">
+                        <div class="value-icon">
+                            <span class="material-icons">favorite</span>
+                        </div>
+                        <h3 data-en="Community Support" data-mm="အသိုင်းအဝိုင်းကိုပံ့ပိုးခြင်း">Community Support</h3>
+                        <p data-en="We empower local artisans by providing fair wages and opportunities to showcase their incredible talents to the world." data-mm="ကျွန်ုပ်တို့ဟာ ဒေသခံလက်မှုပညာရှင်တွေကို မျှတတဲ့လုပ်ခလစာတွေပေးပြီး သူတို့ရဲ့ အံ့သြဖွယ်ကောင်းတဲ့ အရည်အချင်းတွေကို ကမ္ဘာကိုပြသဖို့ အခွင့်အလမ်းတွေဖန်တီးပေးခြင်းဖြင့် အားပေးကူညီပါတယ်။">We empower local artisans by providing fair wages and opportunities to showcase their incredible talents to the world.</p>
+                    </div>
+                    
+                    <div class="value-card mdc-card">
+                        <div class="value-icon">
+                            <span class="material-icons">star</span>
+                        </div>
+                        <h3 data-en="Quality Excellence" data-mm="အရည်အသွေးထူးချွန်မှု">Quality Excellence</h3>
+                        <p data-en="Every product undergoes careful quality control to ensure it meets our high standards and exceeds customer expectations." data-mm="ထုတ်ကုန်တိုင်းဟာ ကျွန်ုပ်တို့ရဲ့ မြင့်မားတဲ့စံနှုန်းတွေနဲ့ ကိုက်ညီပြီး သုံးစွဲသူတွေရဲ့ မျှော်လင့်ချက်တွေကို ကျော်လွန်ကြောင်း သေချာစေဖို့အတွက် အရည်အသွေးကို ဂရုတစိုက်စစ်ဆေးပါတယ်။">Every product undergoes careful quality control to ensure it meets our high standards and exceeds customer expectations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="Meet Our Team" data-mm="ကျွန်ုပ်တို့အဖွဲ့သားများနှင့်တွေ့ဆုံခြင်း">Meet Our Team</h2>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member mdc-card">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=300&h=300&fit=crop&crop=face" alt="Mimo" class="member-photo">
+                        <div class="member-info">
+                            <h3 data-en="Mimo Thant" data-mm="မီမိုသန့်">Mimo Thant</h3>
+                            <p class="member-role" data-en="Founder & Creative Director" data-mm="တည်ထောင်သူနှင့် ဖန်တီးမှုဒါရိုက်တာ">Founder & Creative Director</p>
+                            <p class="member-bio" data-en="With over 15 years of experience in traditional crafts, Mimo leads our creative vision and maintains relationships with artisan communities." data-mm="ရိုးရာလက်မှုပညာမှာ ၁၅ နှစ်ကျော် အတွေ့အကြုံရှိတဲ့ မီမိုဟာ ကျွန်ုပ်တို့ရဲ့ ဖန်တီးမှုဆိုင်ရာအမြင်ကို ဦးဆောင်ပြီး လက်မှုပညာရှင်အသိုင်းအဝိုင်းတွေနဲ့ ဆက်ဆံရေးကို ထိန်းသိမ်းပါတယ်။">With over 15 years of experience in traditional crafts, Mimo leads our creative vision and maintains relationships with artisan communities.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member mdc-card">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face" alt="Kyaw" class="member-photo">
+                        <div class="member-info">
+                            <h3 data-en="Kyaw Min" data-mm="ကျော်မင်း">Kyaw Min</h3>
+                            <p class="member-role" data-en="Operations Manager" data-mm="လုပ်ငန်းလည်ပတ်မှုမန်နေဂျာ">Operations Manager</p>
+                            <p class="member-bio" data-en="Kyaw ensures smooth operations and quality control, working closely with our artisan partners to maintain excellence." data-mm="ကျော်ကတော့ လုပ်ငန်းတွေ ချောမွေ့စွာလည်ပတ်ဖို့နဲ့ အရည်အသွေးထိန်းချုပ်ဖို့ တာဝန်ယူထားပြီး ထူးချွန်မှုကို ထိန်းသိမ်းဖို့ ကျွန်ုပ်တို့ရဲ့ လက်မှုပညာရှင်လုပ်ဖော်ကိုင်ဖက်တွေနဲ့ နီးနီးကပ်ကပ် လုပ်ဆောင်ပါတယ်။">Kyaw ensures smooth operations and quality control, working closely with our artisan partners to maintain excellence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member mdc-card">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face" alt="Thida" class="member-photo">
+                        <div class="member-info">
+                            <h3 data-en="Thida Aye" data-mm="သီတာအေး">Thida Aye</h3>
+                            <p class="member-role" data-en="Customer Relations" data-mm="ဖောက်သည်ဆက်ဆံရေး">Customer Relations</p>
+                            <p class="member-bio" data-en="Thida connects with customers worldwide, sharing the stories behind each piece and ensuring exceptional service." data-mm="သီတာကတော့ ကမ္ဘာတစ်ဝှမ်းက ဖောက်သည်တွေနဲ့ ချိတ်ဆက်ပြီး ပစ္စည်းတစ်ခုချင်းစီရဲ့ နောက်ကွယ်က ဇာတ်လမ်းတွေကို မျှဝေကာ ထူးခြားကောင်းမွန်တဲ့ ဝန်ဆောင်မှုကို သေချာစေပါတယ်။">Thida connects with customers worldwide, sharing the stories behind each piece and ensuring exceptional service.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-en="Get in Touch" data-mm="ဆက်သွယ်ရန်">Get in Touch</h2>
+                </div>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <span class="material-icons">location_on</span>
+                            <div>
+                                <h4 data-en="Visit Our Workshop" data-mm="ကျွန်ုပ်တို့၏အလုပ်ရုံသို့လာရောက်ပါ">Visit Our Workshop</h4>
+                                <p data-en="123 Handicraft Street, Yangon, Myanmar" data-mm="၁၂၃ လက်မှုလမ်း၊ ရန်ကုန်၊ မြန်မာ">123 Handicraft Street, Yangon, Myanmar</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="material-icons">phone</span>
+                            <div>
+                                <h4 data-en="Call Us" data-mm="ကျွန်ုပ်တို့ကိုဖုန်းခေါ်ပါ">Call Us</h4>
+                                <p>+95 9 123 456 789</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="material-icons">email</span>
+                            <div>
+                                <h4 data-en="Email Us" data-mm="ကျွန်ုပ်တို့ထံအီးမေးလ်ပို့ပါ">Email Us</h4>
+                                <p>hello@mimoshandicrafts.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <span class="material-icons">schedule</span>
+                            <div>
+                                <h4 data-en="Workshop Hours" data-mm="အလုပ်ရုံချိန်">Workshop Hours</h4>
+                                <p data-en="Monday - Saturday: 9:00 AM - 6:00 PM" data-mm="တနင်္လာ - စနေ: နံနက် ၉:၀၀ - ညနေ ၆:၀၀">Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-cta">
+                        <h3 data-en="Ready to explore our collection?" data-mm="ကျွန်ုပ်တို့၏စုစည်းမှုကိုကြည့်ရှုရန်အဆင်သင့်ဖြစ်ပြီလား။">Ready to explore our collection?</h3>
+                        <p data-en="Discover beautiful handicrafts that tell the story of Myanmar's rich cultural heritage." data-mm="မြန်မာနိုင်ငံရဲ့ ကြွယ်ဝတဲ့ ယဉ်ကျေးမှုအမွေအနှစ်ရဲ့ ဇာတ်လမ်းကို ပြောပြတဲ့ လှပတဲ့ လက်မှုပစ္စည်းတွေကို ရှာဖွေလိုက်ပါ။">Discover beautiful handicrafts that tell the story of Myanmar's rich cultural heritage.</p>
+                        <button class="mdc-button mdc-button--raised explore-btn" id="exploreBtn">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label" data-en="Explore Products" data-mm="ထုတ်ကုန်များကိုရှာဖွေပါ">Explore Products</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Material Design JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="os.js"></script>
+    <script src="about.js"></script>
+</body>
+</html>

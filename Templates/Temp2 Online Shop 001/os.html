@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Mimo's Handicrafts - Handmade with Love" data-mm="မီမို့ရဲ့ လက်မှုအနုပညာ - ချစ်ခြင်းမေတ္တာများဖြင့် ဖန်တီးသည်။">Mimo's Handicrafts - Handmade with Love</title>
+    
+    <!-- Material Design CSS -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="os.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="app-header">
+        <div class="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="menuBtn">menu</button>
+                    <span class="mdc-top-app-bar__title" data-en="Mimo's Handicrafts" data-mm="မီမို့ရဲ့ လက်မှုအနုပညာ">Mimo's Handicrafts</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <!-- Language Switcher -->
+                    <button class="mdc-icon-button language-switcher" id="langSwitcher" title="Switch Language">
+                        <span class="material-icons">language</span>
+                        <span class="lang-text" data-en="MM" data-mm="EN">MM</span>
+                    </button>
+                    <!-- Cart Button -->
+                    <button class="mdc-icon-button cart-button" id="cartBtn">
+                        <span class="material-icons">shopping_cart</span>
+                        <span class="cart-badge" id="cartBadge">0</span>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer -->
+    <aside class="mdc-drawer mdc-drawer--modal" id="navDrawer">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title" data-en="Menu" data-mm="မီနူး">Menu</h3>
+        </div>
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item mdc-list-item--activated" href="os.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">store</i>
+                    <span class="mdc-list-item__text" data-en="Products" data-mm="ထုတ်ကုန်များ">Products</span>
+                </a>
+                <a class="mdc-list-item" href="cart.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">shopping_cart</i>
+                    <span class="mdc-list-item__text" data-en="Cart" data-mm="စျေးဝယ်ခြင်းတောင်း">Cart</span>
+                </a>
+                <a class="mdc-list-item" href="about.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">info</i>
+                    <span class="mdc-list-item__text" data-en="About Us" data-mm="ကျွန်ုပ်တို့အကြောင်း">About Us</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+
+    <!-- Main Content -->
+    <main class="main-content mdc-top-app-bar--fixed-adjust">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title" data-en="Handmade with Love" data-mm="ချစ်ခြင်းမေတ္တာများဖြင့် ဖန်တီးသည်။">Handmade with Love</h1>
+                <p class="hero-subtitle" data-en="Discover unique handicrafts made with traditional techniques and modern design" data-mm="ခေတ်မီဒီဇိုင်းနှင့် ရိုးရာနည်းပညာများဖြင့် ပြုလုပ်ထားသော ထူးခြားသော လက်မှုပညာများကို ရှာဖွေလိုက်ပါ။">Discover unique handicrafts made with traditional techniques and modern design</p>
+            </div>
+        </section>
+
+        <!-- Product Categories -->
+        <section class="categories-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Shop by Category" data-mm="အမျိုးအစားအလိုက် စျေးဝယ်ပါ။">Shop by Category</h2>
+                <div class="categories-grid">
+                    <div class="category-card mdc-card" data-category="bags">
+                        <div class="mdc-card__primary-action">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=200&fit=crop" alt="Handmade Bags">
+                            </div>
+                            <div class="category-info">
+                                <h3 data-en="Bags" data-mm="အိတ်များ">Bags</h3>
+                                <p data-en="Handwoven bags and purses" data-mm="လက်ယက်အိတ်များနှင့် ပိုက်ဆံအိတ်များ">Handwoven bags and purses</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mdc-card" data-category="jewelry">
+                        <div class="mdc-card__primary-action">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300&h=200&fit=crop" alt="Handmade Jewelry">
+                            </div>
+                            <div class="category-info">
+                                <h3 data-en="Jewelry" data-mm="ရတနာ">Jewelry</h3>
+                                <p data-en="Traditional and modern jewelry" data-mm="ရိုးရာနှင့် ခေတ်မီရတနာများ">Traditional and modern jewelry</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mdc-card" data-category="textiles">
+                        <div class="mdc-card__primary-action">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=200&fit=crop" alt="Handmade Textiles">
+                            </div>
+                            <div class="category-info">
+                                <h3 data-en="Textiles" data-mm="အထည်အလိပ်">Textiles</h3>
+                                <p data-en="Woven fabrics and scarves" data-mm="ယက်ထည်နှင့် ပဝါများ">Woven fabrics and scarves</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card mdc-card" data-category="home">
+                        <div class="mdc-card__primary-action">
+                            <div class="category-image">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=300&h=200&fit=crop" alt="Home Decor">
+                            </div>
+                            <div class="category-info">
+                                <h3 data-en="Home Decor" data-mm="အိမ်အလှဆင်">Home Decor</h3>
+                                <p data-en="Decorative items for your home" data-mm="သင့်အိမ်အတွက် အလှဆင်ပစ္စည်းများ">Decorative items for your home</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="products-section">
+            <div class="container">
+                <h2 class="section-title" data-en="Featured Products" data-mm="အထူးထုတ်ကုန်များ">Featured Products</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating Action Button for Cart -->
+    <button class="mdc-fab mdc-fab--extended cart-fab" id="cartFab">
+        <span class="material-icons mdc-fab__icon">shopping_cart</span>
+        <span class="mdc-fab__label" data-en="View Cart" data-mm="စျေးဝယ်ခြင်းတောင်းကို ကြည့်ပါ။">View Cart</span>
+    </button>
+
+    <!-- Material Design JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="os.js"></script>
+</body>
+</html>

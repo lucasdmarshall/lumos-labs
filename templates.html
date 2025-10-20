@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Templates - Custom MVP Websites</title>
+    
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Material Design CSS -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css?v=20251025">
+    <link rel="stylesheet" href="templates.css?v=palette-003">
+    
+    <meta name="description" content="Browse our collection of stunning website templates. Custom MVP websites for 20,000 MMK with Material Design and responsive layouts.">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner"></div>
+        <p>Loading Templates...</p>
+    </div>
+
+    <!-- Navigation -->
+    <header class="mdc-top-app-bar mdc-top-app-bar--fixed">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu" id="menu-button">menu</button>
+                <span class="mdc-top-app-bar__title">MVP Websites Myanmar</span>
+            </section>
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+                <nav class="desktop-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="templates.html" class="nav-link active">Templates</a>
+                    <a href="index.html#services" class="nav-link">Services</a>
+                    <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+                    <a href="index.html#pricing" class="nav-link">Pricing</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </nav>
+            </section>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <aside class="mdc-drawer mdc-drawer--modal">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title">MVP Websites</h3>
+            <h6 class="mdc-drawer__subtitle">Professional Web Solutions</h6>
+        </div>
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item" href="index.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                    <span class="mdc-list-item__text">Home</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="templates.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">web</i>
+                    <span class="mdc-list-item__text">Templates</span>
+                </a>
+                <a class="mdc-list-item" href="index.html#services">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">build</i>
+                    <span class="mdc-list-item__text">Services</span>
+                </a>
+                <a class="mdc-list-item" href="index.html#portfolio">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">work</i>
+                    <span class="mdc-list-item__text">Portfolio</span>
+                </a>
+                <a class="mdc-list-item" href="index.html#pricing">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">attach_money</i>
+                    <span class="mdc-list-item__text">Pricing</span>
+                </a>
+                <a class="mdc-list-item" href="index.html#contact">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic" aria-hidden="true">contact_mail</i>
+                    <span class="mdc-list-item__text">Contact</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- Drawer Scrim -->
+    <div class="mdc-drawer-scrim"></div>
+
+    <main class="mdc-top-app-bar--fixed-adjust">
+        <!-- Hero Section -->
+        <section class="templates-hero">
+            <div class="container">
+                <div class="hero-content fade-in-up">
+                    <h1 class="hero-title">Browse Our Templates</h1>
+                    <p class="hero-subtitle">Choose from our collection of stunning, responsive website templates. Each template is fully customizable and comes with Material Design components.</p>
+                    
+                    <!-- Filter Buttons -->
+                    <div class="filter-buttons">
+                        <button class="mdc-button mdc-button--raised filter-btn active" data-filter="all">
+                            <span class="mdc-button__label">All Templates</span>
+                        </button>
+                        <button class="mdc-button mdc-button--outlined filter-btn" data-filter="business">
+                            <span class="mdc-button__label">Business</span>
+                        </button>
+                        <button class="mdc-button mdc-button--outlined filter-btn" data-filter="portfolio">
+                            <span class="mdc-button__label">Portfolio</span>
+                        </button>
+                        <button class="mdc-button mdc-button--outlined filter-btn" data-filter="ecommerce">
+                            <span class="mdc-button__label">E-commerce</span>
+                        </button>
+                        <button class="mdc-button mdc-button--outlined filter-btn" data-filter="blog">
+                            <span class="mdc-button__label">Blog</span>
+                        </button>
+                        <button class="mdc-button mdc-button--outlined filter-btn" data-filter="landing">
+                            <span class="mdc-button__label">Landing Page</span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Templates Gallery -->
+        <section class="templates-gallery">
+            <div class="container">
+                <!-- Template Search (Sticky) -->
+                <div class="template-search">
+                    <input id="templateSearch" type="text" placeholder="Search templates by name, features, or description" aria-label="Search templates" />
+                </div>
+                <div class="templates-grid" id="templatesGrid">
+                    
+                    <!-- Influencer 001 (Business) -->
+                    <div class="template-card mdc-card" data-category="business" data-code-base="IN01">
+                        <div class="template-preview">
+                            <img class="template-image" src="Influencer%20001%20screenshot.png" alt="Influencer 001 template screenshot">
+                        </div>
+                        <div class="template-info">
+                            <h3 class="template-title">Influencer 001</h3>
+                            <p class="template-description">Personal brand site with hero bio, social links, and contact CTA.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Hero + Bio</span>
+                                <span class="feature-tag">Social Links</span>
+                                <span class="feature-tag">Contact CTA</span>
+                            </div>
+                            <div class="template-actions">
+                                <div class="template-price-row">
+                                    <div class="color-palette" aria-label="Template color palette">
+                                        <span class="color-dot" style="background:#c8afd5"></span>
+                                        <span class="color-dot" style="background:#f8c3d7"></span>
+                                        <span class="color-dot" style="background:#ff9292"></span>
+                                        <span class="color-dot" style="background:#b8daf7"></span>
+                                        <span class="color-dot" style="background:#c7dab6"></span>
+                                        <span class="color-dot" style="background:#f4e59a"></span>
+                                    </div>
+                                </div>
+                                <button class="mdc-button mdc-button--outlined preview-btn" data-preview-url="Templates/Temp3 Influencer 001/index.html" aria-label="Preview Influencer 001">
+                                    <span class="material-icons mdc-button__icon" aria-hidden="true">visibility</span>
+                                    <span class="mdc-button__label">Preview</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio 001 -->
+                    <div class="template-card mdc-card" data-category="portfolio" data-code-base="PO01">
+                        <div class="template-preview">
+                            <img class="template-image" src="Portfolio%20001%20screenshot.png" alt="Portfolio 001 template screenshot">
+                        </div>
+                        <div class="template-info">
+                            <h3 class="template-title">Portfolio 001</h3>
+                            <p class="template-description">Clean portfolio with projects grid, about section, and contact form.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Projects Grid</span>
+                                <span class="feature-tag">About</span>
+                                <span class="feature-tag">Contact</span>
+                            </div>
+                            <div class="template-actions">
+                                <div class="template-price-row">
+                                    <div class="color-palette" aria-label="Template color palette">
+                                        <span class="color-dot" style="background:#c8afd5"></span>
+                                        <span class="color-dot" style="background:#f8c3d7"></span>
+                                        <span class="color-dot" style="background:#ff9292"></span>
+                                        <span class="color-dot" style="background:#b8daf7"></span>
+                                        <span class="color-dot" style="background:#c7dab6"></span>
+                                        <span class="color-dot" style="background:#f4e59a"></span>
+                                    </div>
+                                </div>
+                                <button class="mdc-button mdc-button--outlined preview-btn" data-preview-url="Templates/Temp1 Portfolio 001/portfolio001.html" aria-label="Preview Portfolio 001">
+                                    <span class="material-icons mdc-button__icon" aria-hidden="true">visibility</span>
+                                    <span class="mdc-button__label">Preview</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Online Shop 001 -->
+                    <div class="template-card mdc-card" data-category="ecommerce" data-code-base="OS01">
+                        <div class="template-preview">
+                            <img class="template-image" src="Online%20Shop%20001%20screenshot.png" alt="Online Shop 001 template screenshot">
+                        </div>
+                        <div class="template-info">
+                            <h3 class="template-title">Online Shop 001</h3>
+                            <p class="template-description">Simple shop with product grid, cart UI, and checkout layout.</p>
+                            <div class="template-features">
+                                <span class="feature-tag">Product Grid</span>
+                                <span class="feature-tag">Cart UI</span>
+                                <span class="feature-tag">Checkout UI</span>
+                            </div>
+                            <div class="template-actions">
+                                <div class="template-price-row">
+                                    <div class="color-palette" aria-label="Template color palette">
+                                        <span class="color-dot" style="background:#c8afd5"></span>
+                                        <span class="color-dot" style="background:#f8c3d7"></span>
+                                        <span class="color-dot" style="background:#ff9292"></span>
+                                        <span class="color-dot" style="background:#b8daf7"></span>
+                                        <span class="color-dot" style="background:#c7dab6"></span>
+                                        <span class="color-dot" style="background:#f4e59a"></span>
+                                    </div>
+                                </div>
+                                <button class="mdc-button mdc-button--outlined preview-btn" data-preview-url="Templates/Temp2 Online Shop 001/os.html" aria-label="Preview Online Shop 001">
+                                    <span class="material-icons mdc-button__icon" aria-hidden="true">visibility</span>
+                                    <span class="mdc-button__label">Preview</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="templates-cta">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Choose your template and let's build your amazing website together!</p>
+                    <div class="cta-buttons">
+                        <a href="index.html#contact" class="mdc-button mdc-button--raised">
+                            <span class="mdc-button__label">Contact Us</span>
+                        </a>
+                        <a href="index.html#pricing" class="mdc-button mdc-button--outlined">
+                            <span class="mdc-button__label">View Pricing</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                <h3>MVP Websites Myanmar</h3>
+                <p>Creating stunning websites that drive results. Professional MVP development at affordable prices.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="templates.html">Templates</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: hello@mvpstudio.com</p>
+                    <p>Phone: +95 9 123 456 789</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MVP Studio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <button class="mdc-fab mdc-fab--extended floating-contact" id="floatingContactBtn">
+        <span class="material-icons mdc-fab__icon">message</span>
+    </button>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop">
+        <span class="material-icons">keyboard_arrow_up</span>
+    </button>
+
+    <!-- Material Design JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js?v=20251025"></script>
+<script src="templates.js?v=palette-003"></script>
+</body>
+</html>

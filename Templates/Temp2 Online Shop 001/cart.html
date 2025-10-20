@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-en="Shopping Cart - Mimo's Handicrafts" data-mm="စျေးဝယ်ခြင်းတောင်း - မီမို့လက်မှုပစ္စည်းများ">Shopping Cart - Mimo's Handicrafts</title>
+    
+    <!-- Material Design CSS -->
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="os.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="app-header">
+        <div class="mdc-top-app-bar mdc-top-app-bar--fixed">
+            <div class="mdc-top-app-bar__row">
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                    <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" id="menuBtn">menu</button>
+                    <span class="mdc-top-app-bar__title" data-en="Shopping Cart" data-mm="စျေးဝယ်ခြင်းတောင်း">Shopping Cart</span>
+                </section>
+                <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                    <!-- Language Switcher -->
+                    <button class="mdc-icon-button language-switcher" id="langSwitcher" title="Switch Language">
+                        <span class="material-icons">language</span>
+                        <span class="lang-text" data-en="MM" data-mm="EN">MM</span>
+                    </button>
+                    <!-- Back to Products -->
+                    <button class="mdc-icon-button" id="backBtn" title="Back to Products">
+                        <span class="material-icons">store</span>
+                    </button>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Drawer -->
+    <aside class="mdc-drawer mdc-drawer--modal" id="navDrawer">
+        <div class="mdc-drawer__header">
+            <h3 class="mdc-drawer__title" data-en="Menu" data-mm="မီနူး">Menu</h3>
+        </div>
+        <div class="mdc-drawer__content">
+            <nav class="mdc-list">
+                <a class="mdc-list-item" href="os.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">store</i>
+                    <span class="mdc-list-item__text" data-en="Products" data-mm="ပစ္စည်းများ">Products</span>
+                </a>
+                <a class="mdc-list-item mdc-list-item--activated" href="cart.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">shopping_cart</i>
+                    <span class="mdc-list-item__text" data-en="Cart" data-mm="စျေးဝယ်ခြင်းတောင်း">Cart</span>
+                </a>
+                <a class="mdc-list-item" href="about.html">
+                    <span class="mdc-list-item__ripple"></span>
+                    <i class="material-icons mdc-list-item__graphic">info</i>
+                    <span class="mdc-list-item__text" data-en="About Us" data-mm="ကျွန်ုပ်တို့အကြောင်း">About Us</span>
+                </a>
+            </nav>
+        </div>
+    </aside>
+    <div class="mdc-drawer-scrim"></div>
+
+    <!-- Main Content -->
+    <main class="main-content mdc-top-app-bar--fixed-adjust">
+        <div class="container">
+            <!-- Cart Header -->
+            <section class="cart-header">
+                <h1 class="page-title" data-en="Your Shopping Cart" data-mm="သင်၏ စျေးဝယ်ခြင်းတောင်း">Your Shopping Cart</h1>
+                <p class="cart-subtitle" data-en="Review your items and proceed to contact us" data-mm="ပစ္စည်းများကို စစ်ဆေးပြီး ဆက်သွယ်ရန်">Review your items and proceed to contact us</p>
+            </section>
+
+            <!-- Cart Content -->
+            <div class="cart-content">
+                <!-- Cart Items -->
+                <section class="cart-items-section">
+                    <div class="cart-items" id="cartItems">
+                        <!-- Cart items will be dynamically loaded here -->
+                    </div>
+                    
+                    <!-- Empty Cart Message -->
+                    <div class="empty-cart" id="emptyCart" style="display: none;">
+                        <div class="empty-cart-icon">
+                            <span class="material-icons">shopping_cart</span>
+                        </div>
+                        <h3 data-en="Your cart is empty" data-mm="စျေးဝယ်ခြင်းတောင်းထဲတွင် ပစ္စည်းမရှိပါ">Your cart is empty</h3>
+                        <p data-en="Add some beautiful handicrafts to your cart" data-mm="လှပသော လက်မှုပစ္စည်းများကို သင်၏ စျေးဝယ်ခြင်းတောင်းထဲသို့ ထည့်ပါ">Add some beautiful handicrafts to your cart</p>
+                        <button class="mdc-button mdc-button--raised continue-shopping-btn" id="continueShoppingBtn">
+                            <span class="mdc-button__ripple"></span>
+                            <span class="mdc-button__label" data-en="Continue Shopping" data-mm="ဆက်လက်စျေးဝယ်မည်">Continue Shopping</span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- Cart Summary -->
+                <aside class="cart-summary" id="cartSummary">
+                    <div class="summary-card mdc-card">
+                        <div class="summary-header">
+                            <h3 data-en="Order Summary" data-mm="မှာယူမှု အကျဉ်းချုပ်">Order Summary</h3>
+                        </div>
+                        
+                        <div class="summary-details">
+                            <div class="summary-row">
+                                <span data-en="Items" data-mm="ပစ္စည်းများ">Items</span>
+                                <span id="itemCount">0</span>
+                            </div>
+                            <div class="summary-row">
+                                <span data-en="Subtotal" data-mm="စုစုပေါင်း">Subtotal</span>
+                                <span id="subtotal">0 MMK</span>
+                            </div>
+                            <div class="summary-row total-row">
+                                <span data-en="Total" data-mm="စုစုပေါင်းကျသင့်ငွေ">Total</span>
+                                <span id="total">0 MMK</span>
+                            </div>
+                        </div>
+
+                        <div class="summary-actions">
+                            <button class="mdc-button mdc-button--raised proceed-btn" id="proceedBtn">
+                                <span class="mdc-button__ripple"></span>
+                                <i class="material-icons mdc-button__icon">message</i>
+                                <span class="mdc-button__label" data-en="Proceed via Messenger" data-mm="Messenger မှ မှာယူမည်">Proceed via Messenger</span>
+                            </button>
+                            
+                            <button class="mdc-button mdc-button--outlined clear-cart-btn" id="clearCartBtn">
+                                <span class="mdc-button__ripple"></span>
+                                <span class="mdc-button__label" data-en="Clear Cart" data-mm="စျေးဝယ်ခြင်းတောင်းရှင်းလင်းမည်">Clear Cart</span>
+                            </button>
+                        </div>
+
+                        <div class="messenger-info">
+                            <div class="info-icon">
+                                <span class="material-icons">info</span>
+                            </div>
+                            <div class="info-text">
+                                <p data-en="You'll be redirected to Facebook Messenger to complete your order with our team." data-mm="သင်၏ မှာယူမှုကို ကျွန်ုပ်တို့အဖွဲ့နှင့်အတူ အပြီးသတ်ရန် Facebook Messenger သို့ ပို့ဆောင်ပေးပါမည်။">You'll be redirected to Facebook Messenger to complete your order with our team.</p>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <!-- Material Design JS -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="os.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
